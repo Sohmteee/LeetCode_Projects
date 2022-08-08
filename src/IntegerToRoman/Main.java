@@ -28,29 +28,34 @@ public class Main {
         char[] intChar = String.valueOf(num).toCharArray();
         char[] temp = new char[intChar.length];
 
-        for (int i = intChar.length - 1; i >= 0; i++) {
-            temp[(i - intChar.length) - 1] = intChar[i];
-            System.out.print(temp[(intChar.length) - 1 - i]);
+        int intCharLength = intChar.length - 1, tempLength = 0;
+
+        while (intCharLength > 0) {
+            temp[tempLength] = intChar[intCharLength];
+            intCharLength--;
+            tempLength++;
         }
 
-            for (int i = 3; i >= 0; i--) {
-                int digit;
-                try {
-                    digit = Integer.parseInt(String.valueOf(intChar[i]));
-                } catch (ArrayIndexOutOfBoundsException e) {
-                    continue;
-                }
+        for(var digit : temp) System.out.print(digit);
 
-                Map<Integer, String> map = switch (i) {
-                    case 0 -> units;
-                    case 1 -> tens;
-                    case 2 -> hundreds;
-                    case 3 -> thousands;
-                    default -> new HashMap<>();
-                };
-
-                roman.insert(0, map.get(digit) == null ? "" : map.get(digit));
+        for (int i = 3; i >= 0; i--) {
+            int digit;
+            try {
+                digit = Integer.parseInt(String.valueOf(intChar[i]));
+            } catch (ArrayIndexOutOfBoundsException e) {
+                continue;
             }
+
+            Map<Integer, String> map = switch (i) {
+                case 0 -> units;
+                case 1 -> tens;
+                case 2 -> hundreds;
+                case 3 -> thousands;
+                default -> new HashMap<>();
+            };
+
+            roman.insert(0, map.get(digit) == null ? "" : map.get(digit));
+        }
 
         return new String(roman);
     }
