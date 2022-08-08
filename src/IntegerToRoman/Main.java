@@ -26,9 +26,12 @@ public class Main {
         System.out.println(num);
 
         char[] intChar = String.valueOf(num).toCharArray();
+        char[] reverseChar = new char[intChar.length];
 
-        for (int i = 0; i < ; i++) {
-            
+        for (int i = intChar.length - 1; i >= 0; i--) {
+            for (int j = 0; j < intChar.length; j++) {
+                if (reverseChar[j] == '')
+            }
         }
 
         for (int i = 3; i >= 0; i--) {
