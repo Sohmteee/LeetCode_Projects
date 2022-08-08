@@ -6,8 +6,11 @@ import java.util.Map;
 public class Main {
 
     public static String intToRoman(int num) {
+        //create a StringBuilder that will hold the final result
         StringBuilder roman = new StringBuilder();
+
         if (num >= 4000) return "";
+
         Map<Integer, String> units = new HashMap<>(),
                 tens = new HashMap<>(),
                 hundreds = new HashMap<>(),
@@ -18,6 +21,7 @@ public class Main {
         String[] hundred = {"", "C", "CC", "CCC", "CD", "D", "DC", "DCC", "DCCC", "CM"};
         String[] thousand = {"", "M", "MM", "MMM"};
 
+        //assign values to the maps
         for (int i = 0; i < unit.length; i++) units.put(i, unit[i]);
         for (int i = 0; i < ten.length; i++) tens.put(i, ten[i]);
         for (int i = 0; i < hundred.length; i++) hundreds.put(i, hundred[i]);
@@ -26,6 +30,7 @@ public class Main {
         char[] intChar = String.valueOf(num).toCharArray();
         char[] reverseChar = new char[intChar.length];
 
+        //reverse the intChar
         for (int i = intChar.length - 1; i >= 0; i--) {
             for (int j = 0; j < intChar.length; j++) {
                 if (reverseChar[j] == '\0') {
@@ -35,6 +40,7 @@ public class Main {
             }
         }
 
+        //insert the respective roman numeral for each digit
         for (int i = 0; i < intChar.length; i++) {
             int digit = Integer.parseInt(String.valueOf(reverseChar[i]));
 
