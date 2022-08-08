@@ -6,6 +6,7 @@ import java.util.Map;
 public class Main {
     public static String intToRoman(int num) {
         String roman = "";
+        if (num >= 4000) return "";
         Map<Integer, String> units = new HashMap<>(),
                 tens = new HashMap<>(),
                 hundreds = new HashMap<>(),
@@ -22,6 +23,7 @@ public class Main {
         for (int i = 1; i <= thousand.length; i++) thousands.put(i, thousand[i-1]);
 
         
+
 
         return roman;
     }
