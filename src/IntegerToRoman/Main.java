@@ -26,26 +26,31 @@ public class Main {
         System.out.println(num);
 
         char[] intChar = String.valueOf(num).toCharArray();
-        
+        char[] temp = new char[intChar.length];
 
-        for (int i = 3; i >= 0; i--) {
-            int digit;
-            try {
-                digit = Integer.parseInt(String.valueOf(intChar[i]));
-            } catch (ArrayIndexOutOfBoundsException e) {
-                continue;
-            }
-
-            Map<Integer, String> map = switch (i) {
-                case 0 -> units;
-                case 1 -> tens;
-                case 2 -> hundreds;
-                case 3 -> thousands;
-                default -> new HashMap<>();
-            };
-
-            roman.insert(0, map.get(digit) == null ? "" : map.get(digit));
+        for (int i = intChar.length - 1; i >= 0; i++) {
+            temp[(intChar.length) - 1 - i] = intChar[i];
+            System.out.print(temp[(intChar.length) - 1 - i]);
         }
+
+            for (int i = 3; i >= 0; i--) {
+                int digit;
+                try {
+                    digit = Integer.parseInt(String.valueOf(intChar[i]));
+                } catch (ArrayIndexOutOfBoundsException e) {
+                    continue;
+                }
+
+                Map<Integer, String> map = switch (i) {
+                    case 0 -> units;
+                    case 1 -> tens;
+                    case 2 -> hundreds;
+                    case 3 -> thousands;
+                    default -> new HashMap<>();
+                };
+
+                roman.insert(0, map.get(digit) == null ? "" : map.get(digit));
+            }
 
         return new String(roman);
     }
