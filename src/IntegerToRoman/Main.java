@@ -28,7 +28,7 @@ public class Main {
         char[] intChar = String.valueOf(num).toCharArray();
 
         for (int i = 3; i >= 0; i--) {
-            int digit = i > 2 ? 0 : Integer.parseInt(String.valueOf(intChar[i]));
+            int digit = intChar.length > 3 ? 0 : Integer.parseInt(String.valueOf(intChar[i]));
 
             Map<Integer, String> map = switch (i) {
                 case 0 -> units;
