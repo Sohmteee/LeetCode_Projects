@@ -26,17 +26,10 @@ public class Main {
         System.out.println(num);
 
         char[] intChar = String.valueOf(num).toCharArray();
-        char[] temp = new char[intChar.length];
 
-        int intCharLength = intChar.length - 1, tempLength = 0;
-
-        while (intCharLength >= 1) {
-            temp[tempLength] = intChar[intCharLength];
-            intCharLength--;
-            tempLength++;
+        for (int i = 0; i < ; i++) {
+            
         }
-
-        for(var digit : temp) System.out.print(digit);
 
         for (int i = 3; i >= 0; i--) {
             int digit;
