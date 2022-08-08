@@ -30,7 +30,9 @@ public class Main {
 
         for (int i = intChar.length - 1; i >= 0; i--) {
             for (int j = 0; j < intChar.length; j++) {
-                if (reverseChar[j] == '')
+                if (reverseChar[j] == 0) {
+
+                }
             }
         }
 
