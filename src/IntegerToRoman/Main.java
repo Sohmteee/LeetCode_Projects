@@ -40,7 +40,7 @@ public class Main {
         for (var digit : reverseChar) System.out.print(digit);
         System.out.println();
 
-        for (int i = 3; i >= 0; i--) {
+        for (int i = 0; i < intChar.length; i++) {
             int digit;
             try {
                 digit = Integer.parseInt(String.valueOf(intChar[i]));
