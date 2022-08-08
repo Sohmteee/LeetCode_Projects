@@ -23,7 +23,7 @@ public class Main {
         for (int i = 1; i <= thousand.length; i++) thousands.put(i, thousand[i - 1]);
 
 
-        return thousands.get(num % 1000) + hundreds.get(num % 100) + tens.get(num % 10) + units.get(num % 1);
+        return thousands.get(num / 1000) + hundreds.get(num / 100) + tens.get(num / 10) + units.get(num / 1);
     }
 
     public static void main(String[] args) {
