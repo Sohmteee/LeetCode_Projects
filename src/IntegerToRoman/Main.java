@@ -33,8 +33,6 @@ public class Main {
                 if (reverseChar[j] == '\0') {
                     reverseChar[j] = intChar[i];
                     break;
-                } else {
-                    continue;
                 }
             }
         }
