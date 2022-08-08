@@ -27,7 +27,7 @@ public class Main {
 
         char[] intChar = String.valueOf(num).toCharArray();
 
-        for (int i = intChar.length - 1; i >= 0; i--) {
+        for (int i = 4; i >= 0; i--) {
             int digit = Integer.parseInt(String.valueOf(intChar[i]));
 
             Map<Integer, String> map = switch (i) {
