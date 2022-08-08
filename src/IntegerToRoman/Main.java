@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Main {
-    public String intToRoman(int num) {
+    public static void intToRoman(int num) {
         String roman = "";
         Map<Integer, String> units = new HashMap<>(),
                 tens = new HashMap<>(),
@@ -18,6 +18,10 @@ public class Main {
 
         for (int i = 1; i <= unit.length; i++) units.put(i, unit[i]);
 
-        return roman;
+        System.out.println(units);;
+    }
+
+    public static void main(String[] args) {
+        intToRoman(1);
     }
 }
