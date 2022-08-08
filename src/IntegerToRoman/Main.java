@@ -25,19 +25,19 @@ public class Main {
 
         char[] intChar = String.valueOf(num).toCharArray();
 
-        for (int i = 0; i < intChar.length; i++) {
+        for (int i = intChar.length - 1; i >= 0; i--) {
             int digit = Integer.parseInt(String.valueOf(intChar[i]));
             Map<Integer, String> map = new HashMap<>();
 
             switch (i) {
                 case 0:
-                    map = thousands;
-                case 1:
-                    map = hundreds;
-                case 2:
-                    map = tens;
-                case 3:
                     map = units;
+                case 1:
+                    map = tens;
+                case 2:
+                    map = hundreds;
+                case 3:
+                    map = thousands;
             }
 
             roman.insert(0, map.get(digit) == null ? "" : map.get(digit));
