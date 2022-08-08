@@ -32,8 +32,10 @@ public class Main {
             for (int j = 0; j < intChar.length; j++) {
                 if (reverseChar[j] == '\0') {
                     reverseChar[j] = intChar[i];
+                    break;
+                } else {
+                    continue;
                 }
-                continue;
             }
         }
 
