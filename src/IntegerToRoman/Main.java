@@ -29,7 +29,7 @@ public class Main {
         char[] temp = new char[intChar.length];
 
         for (int i = intChar.length - 1; i >= 0; i++) {
-            temp[(intChar.length) - 1 - i] = intChar[i];
+            temp[(i - intChar.length) - 1] = intChar[i];
             System.out.print(temp[(intChar.length) - 1 - i]);
         }
 
