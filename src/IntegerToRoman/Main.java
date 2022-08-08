@@ -23,6 +23,12 @@ public class Main {
         for (int i = 1; i <= hundred.length; i++) hundreds.put(i, hundred[i - 1]);
         for (int i = 1; i <= thousand.length; i++) thousands.put(i, thousand[i - 1]);
 
+        System.out.println(units);
+        System.out.println(tens);
+        System.out.println(hundreds);
+        System.out.println(thousands);
+        System.out.println();
+
         char[] intChar = String.valueOf(num).toCharArray();
 
         for (int i = intChar.length - 1; i >= 0; i--) {
