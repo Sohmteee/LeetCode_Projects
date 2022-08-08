@@ -6,7 +6,7 @@ import java.util.Map;
 public class Main {
 
     public static String intToRoman(int num) {
-        String roman = "";
+        StringBuilder roman = new StringBuilder();
         if (num >= 4000) return "";
         Map<Integer, String> units = new HashMap<>(),
                 tens = new HashMap<>(),
@@ -30,17 +30,20 @@ public class Main {
             Map<Integer, String> map = new HashMap<>();
 
             switch (i) {
-                case 0: map = units;
-                case 1: map = tens;
-                case 2: map = hundreds;
-                case 3: map = thousands;
+                case 0:
+                    map = units;
+                case 1:
+                    map = tens;
+                case 2:
+                    map = hundreds;
+                case 3:
+                    map = thousands;
             }
+
+            roman.insert(0, map.get(digit));
         }
 
-        return (thousands.get(num / 1000) == null ? "" : thousands.get(num / 1000)) +
-                (hundreds.get(num / 100) == null ? "" : hundreds.get(num / 100)) +
-                (tens.get(num / 10) == null ? "" : tens.get(num / 10)) +
-                (units.get(num) == null ? "" : units.get(num));
+        return new String(roman);
     }
 
     public static void main(String[] args) {
