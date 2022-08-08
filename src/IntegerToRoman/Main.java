@@ -32,12 +32,16 @@ public class Main {
             switch (i) {
                 case 0:
                     map = units;
+                    break;
                 case 1:
                     map = tens;
+                    break;
                 case 2:
                     map = hundreds;
+                    break;
                 case 3:
                     map = thousands;
+                    break;
             }
 
             roman.insert(0, map.get(digit) == null ? "" : map.get(digit));
