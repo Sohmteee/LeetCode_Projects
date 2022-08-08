@@ -30,11 +30,15 @@ public class Main {
 
         for (int i = intChar.length - 1; i >= 0; i--) {
             for (int j = 0; j < intChar.length; j++) {
-                if (reverseChar[j] == 0) {
-
+                if (reverseChar[j] == '\0') {
+                    reverseChar[j] = intChar[i];
                 }
+                continue;
             }
         }
+
+        for (var digit : reverseChar) System.out.print(digit);
+        System.out.println();
 
         for (int i = 3; i >= 0; i--) {
             int digit;
