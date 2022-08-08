@@ -23,11 +23,7 @@ public class Main {
         for (int i = 1; i <= hundred.length; i++) hundreds.put(i, hundred[i - 1]);
         for (int i = 1; i <= thousand.length; i++) thousands.put(i, thousand[i - 1]);
 
-        System.out.println(units);
-        System.out.println(tens);
-        System.out.println(hundreds);
-        System.out.println(thousands);
-        System.out.println("\n" + num);
+        System.out.println(num);
 
         char[] intChar = String.valueOf(num).toCharArray();
 
@@ -50,7 +46,7 @@ public class Main {
                     break;
             }
 
-            roman.append(map.get(digit) == null ? "" : map.get(digit) + " ");
+            roman.insert(0, map.get(digit) == null ? "" : map.get(digit));
         }
 
         return new String(roman);
