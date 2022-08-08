@@ -13,15 +13,15 @@ public class Main {
                 hundreds = new HashMap<>(),
                 thousands = new HashMap<>();
 
-        String[] unit = {"I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX"};
-        String[] ten = {"X", "XX", "XXX", "XL", "L", "LX", "LXX", "LXXX", "XC"};
-        String[] hundred = {"C", "CC", "CCC", "CD", "D", "DC", "DCC", "DCCC", "CM"};
-        String[] thousand = {"M", "MM", "MMM"};
+        String[] unit = {"", "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX"};
+        String[] ten = {"", "X", "XX", "XXX", "XL", "L", "LX", "LXX", "LXXX", "XC"};
+        String[] hundred = {"", "C", "CC", "CCC", "CD", "D", "DC", "DCC", "DCCC", "CM"};
+        String[] thousand = {"", "M", "MM", "MMM"};
 
-        for (int i = 1; i <= unit.length; i++) units.put(i, unit[i - 1]);
-        for (int i = 1; i <= ten.length; i++) tens.put(i, ten[i - 1]);
-        for (int i = 1; i <= hundred.length; i++) hundreds.put(i, hundred[i - 1]);
-        for (int i = 1; i <= thousand.length; i++) thousands.put(i, thousand[i - 1]);
+        for (int i = 0; i < unit.length; i++) units.put(i, unit[i]);
+        for (int i = 0; i < ten.length; i++) tens.put(i, ten[i]);
+        for (int i = 0; i < hundred.length; i++) hundreds.put(i, hundred[i]);
+        for (int i = 0; i < thousand.length; i++) thousands.put(i, thousand[i]);
 
         System.out.println(num);
 
@@ -53,6 +53,6 @@ public class Main {
     }
 
     public static void main(String[] args) {
-        System.out.println(intToRoman(51));
+        System.out.println(intToRoman(50));
     }
 }
