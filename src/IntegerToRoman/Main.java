@@ -26,6 +26,7 @@ public class Main {
         System.out.println(num);
 
         char[] intChar = String.valueOf(num).toCharArray();
+        
 
         for (int i = 3; i >= 0; i--) {
             int digit;
