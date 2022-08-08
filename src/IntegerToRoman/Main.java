@@ -31,16 +31,16 @@ public class Main {
 
             switch (i) {
                 case 0:
-                    map = units;
-                case 1:
-                    map = tens;
-                case 2:
-                    map = hundreds;
-                case 3:
                     map = thousands;
+                case 1:
+                    map = hundreds;
+                case 2:
+                    map = tens;
+                case 3:
+                    map = units;
             }
 
-            roman.insert(0, map.get(digit));
+            roman.insert(0, map.get(digit) == null ? "" : map.get(digit));
         }
 
         return new String(roman);
