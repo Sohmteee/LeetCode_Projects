@@ -44,7 +44,7 @@ public class Main {
                     break;
             }
 
-            roman.append(map.get(digit) == null ? "" : map.get(digit));
+            roman.append(map.get(digit) == null ? "" : map.get(digit) + " ");
         }
 
         return new String(roman);
