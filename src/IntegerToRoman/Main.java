@@ -29,22 +29,14 @@ public class Main {
 
         for (int i = intChar.length - 1; i >= 0; i--) {
             int digit = Integer.parseInt(String.valueOf(intChar[i]));
-            Map<Integer, String> map = new HashMap<>();
 
-            switch (i) {
-                case 0:
-                    map = units;
-                    break;
-                case 1:
-                    map = tens;
-                    break;
-                case 2:
-                    map = hundreds;
-                    break;
-                case 3:
-                    map = thousands;
-                    break;
-            }
+            Map<Integer, String> map = switch (i) {
+                case 0 -> units;
+                case 1 -> tens;
+                case 2 -> hundreds;
+                case 3 -> thousands;
+                default -> new HashMap<>();
+            };
 
             roman.insert(0, map.get(digit) == null ? "" : map.get(digit));
         }
@@ -53,6 +45,6 @@ public class Main {
     }
 
     public static void main(String[] args) {
-        System.out.println(intToRoman(50));
+        System.out.println(intToRoman(100));
     }
 }
