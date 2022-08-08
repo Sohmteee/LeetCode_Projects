@@ -41,12 +41,7 @@ public class Main {
         System.out.println();
 
         for (int i = 0; i < intChar.length; i++) {
-            int digit;
-            try {
-                digit = Integer.parseInt(String.valueOf(intChar[i]));
-            } catch (ArrayIndexOutOfBoundsException e) {
-                continue;
-            }
+            int digit = Integer.parseInt(String.valueOf(reverseChar[i]));
 
             Map<Integer, String> map = switch (i) {
                 case 0 -> units;
