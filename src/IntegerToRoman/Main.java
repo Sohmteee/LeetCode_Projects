@@ -1,2 +1,4 @@
-package IntegerToRoman;public class Main {
+package IntegerToRoman;
+
+public class Main {
 }
