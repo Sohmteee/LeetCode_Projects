@@ -33,16 +33,16 @@ public class Main {
 
             switch (i) {
                 case 0:
-                    map = thousands;
+                    map = units;
                     break;
                 case 1:
-                    map = hundreds;
-                    break;
-                case 2:
                     map = tens;
                     break;
+                case 2:
+                    map = hundreds;
+                    break;
                 case 3:
-                    map = units;
+                    map = thousands;
                     break;
             }
 
@@ -53,6 +53,6 @@ public class Main {
     }
 
     public static void main(String[] args) {
-        System.out.println(intToRoman(1));
+        System.out.println(intToRoman(51));
     }
 }
