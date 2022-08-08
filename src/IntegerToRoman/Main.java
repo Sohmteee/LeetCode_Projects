@@ -27,7 +27,7 @@ public class Main {
         System.out.println(tens);
         System.out.println(hundreds);
         System.out.println(thousands);
-        System.out.println();
+        System.out.println("\n" + num);
 
         char[] intChar = String.valueOf(num).toCharArray();
 
@@ -37,16 +37,16 @@ public class Main {
 
             switch (i) {
                 case 0:
-                    map = units;
+                    map = thousands;
                     break;
                 case 1:
-                    map = tens;
-                    break;
-                case 2:
                     map = hundreds;
                     break;
+                case 2:
+                    map = tens;
+                    break;
                 case 3:
-                    map = thousands;
+                    map = units;
                     break;
             }
 
