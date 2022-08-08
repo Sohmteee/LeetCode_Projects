@@ -30,7 +30,7 @@ public class Main {
 
         int intCharLength = intChar.length - 1, tempLength = 0;
 
-        while (intCharLength > 0) {
+        while (intCharLength >= 1) {
             temp[tempLength] = intChar[intCharLength];
             intCharLength--;
             tempLength++;
