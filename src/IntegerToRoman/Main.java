@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Main {
-    public static void intToRoman(int num) {
+    public static String intToRoman(int num) {
         String roman = "";
         Map<Integer, String> units = new HashMap<>(),
                 tens = new HashMap<>(),
@@ -16,12 +16,17 @@ public class Main {
         String [] hundred = {"C", "CC", "CCC", "CD", "D", "DC", "DCC", "DCCC", "CM"};
         String [] thousand = {"M", "MM", "MMM"};
 
-        for (int i = 1; i <= unit.length; i++) units.put(i, unit[i]);
+        for (int i = 1; i <= unit.length; i++) units.put(i, unit[i-1]);
+        for (int i = 1; i <= ten.length; i++) tens.put(i, ten[i-1]);
+        for (int i = 1; i <= hundred.length; i++) hundreds.put(i, hundred[i-1]);
+        for (int i = 1; i <= thousand.length; i++) thousands.put(i, thousand[i-1]);
 
-        System.out.println(units);;
+        
+
+        return roman;
     }
 
     public static void main(String[] args) {
-        intToRoman(1);
+        System.out.println(intToRoman(1));
     }
 }
