@@ -23,8 +23,6 @@ public class Main {
         for (int i = 0; i < hundred.length; i++) hundreds.put(i, hundred[i]);
         for (int i = 0; i < thousand.length; i++) thousands.put(i, thousand[i]);
 
-        System.out.println(num);
-
         char[] intChar = String.valueOf(num).toCharArray();
         char[] reverseChar = new char[intChar.length];
 
@@ -36,9 +34,6 @@ public class Main {
                 }
             }
         }
-
-        for (var digit : reverseChar) System.out.print(digit);
-        System.out.println();
 
         for (int i = 0; i < intChar.length; i++) {
             int digit = Integer.parseInt(String.valueOf(reverseChar[i]));
@@ -58,6 +53,6 @@ public class Main {
     }
 
     public static void main(String[] args) {
-        System.out.println(intToRoman(100));
+        System.out.println(intToRoman(1994));
     }
 }
