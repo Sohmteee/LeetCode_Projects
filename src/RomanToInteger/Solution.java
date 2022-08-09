@@ -23,10 +23,15 @@ public class Solution {
         for (int i = 0; i < hundred.length; i++) hundreds.put(i, hundred[i]);
         for (int i = 0; i < thousand.length; i++) thousands.put(i, thousand[i]);
 
-        return getString(s, thousands) == "0" ? "" : getString(s, thousands) +
+        char[] intChar = s.toCharArray();
+        String rom = "";
+
+        rom = getString(s, thousands) == "0" ? "" : getString(s, thousands) +
                 getString(s, hundreds) == "0" ? "" : getString(s, hundreds) +
                 getString(s, tens) == "0" ? "" : getString(s, tens) +
                 getString(s, units) == "0" ? "" : getString(s, units);
+
+        return rom;
     }
 
     private static String getString(String s, Map<Integer, String> map) {
