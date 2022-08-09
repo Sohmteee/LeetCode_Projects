@@ -25,12 +25,12 @@ public class Solution {
 
         String rom = "";
 
-        rom = getString(s, thousands) == "0" ? "" : getString(s, thousands) +
+        rom = getString(s, thousands)+
                 getString(s, hundreds) +
                 getString(s, tens) +
                 getString(s, units) + " ";
 
-        System.out.println(rom);
+        System.out.println(Integer.parseInt(rom));
 
         /*s = s.replace("IV", "4");
         s = s.replace("IX", "9");
