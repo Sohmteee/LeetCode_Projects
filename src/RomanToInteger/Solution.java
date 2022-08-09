@@ -67,7 +67,7 @@ public class Solution {
             if (entry.getValue() == n) return String.valueOf(entry.getKey());
         }
 
-        return "0";
+        return "";
     }
 
     public static void main(String[] args) {
