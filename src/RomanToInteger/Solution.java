@@ -22,20 +22,13 @@ public class Solution {
         for (int i = 0; i < thousand.length; i++) thousands.put(i, thousand[i]);
 
         char[] intChar = s.toCharArray();
-        String n = "";
+        String rom = "";
 
-        for (String roman : units.values()) {
-            if (s.contains(roman)){
-                for (int key : units.keySet()) {
-                    if (units.get(key) == roman & (roman.length() > n.length())) {
-                        n = roman;
-                    }
-                }
-            }
-//            s = s.replace(roman, units.keySet());
-        }
+        String n = getString(s, thousands);
 
-        System.out.println(n);
+        rom += n;
+
+        System.out.println(rom);
 
         /*s = s.replace("IV", "4");
         s = s.replace("IX", "9");
@@ -56,7 +49,21 @@ public class Solution {
 
     }
 
+    private static String getString(String s, Map<Integer, String> thousands) {
+        String n = "";
+        for (String roman : thousands.values()) {
+            if (s.contains(roman)){
+                for (int key : thousands.keySet()) {
+                    if (thousands.get(key) == roman & (roman.length() > n.length())) {
+                        n = roman;
+                    }
+                }
+            }
+        }
+        return n;
+    }
+
     public static void main(String[] args) {
-        System.out.println(romanToInt("XIX"));
+        System.out.println(romanToInt("M"));
     }
 }
