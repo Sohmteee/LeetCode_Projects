@@ -21,7 +21,9 @@ public class Solution {
         for (int i = 0; i < hundred.length; i++) hundreds.put(i, hundred[i]);
         for (int i = 0; i < thousand.length; i++) thousands.put(i, thousand[i]);
 
-        s = s.replace("IV", "4");
+        
+
+        /*s = s.replace("IV", "4");
         s = s.replace("IX", "9");
         s = s.replace("XL", "4");
         s = s.replace("XC", "9");
@@ -34,7 +36,7 @@ public class Solution {
         s = s.replace("L", "5");
         s = s.replace("C", "1");
         s = s.replace("D", "5");
-        s = s.replace("M", "1");
+        s = s.replace("M", "1");*/
 
         return Integer.parseInt(s);
 
