@@ -21,6 +21,7 @@ public class Solution {
         for (int i = 0; i < hundred.length; i++) hundreds.put(i, hundred[i]);
         for (int i = 0; i < thousand.length; i++) thousands.put(i, thousand[i]);
 
+        char[] intChar = String.valueOf(num).toCharArray();
         
 
         /*s = s.replace("IV", "4");
