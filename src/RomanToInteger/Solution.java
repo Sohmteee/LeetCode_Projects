@@ -64,10 +64,10 @@ public class Solution {
         }
 
         for (var entry : map.entrySet()) {
-            if (entry.getValue() == n) return String.valueOf(entry.getKey());
+            if (entry.getValue() == n && n != "") n = String.valueOf(entry.getKey());
         }
 
-        return "";
+        return n;
     }
 
     public static void main(String[] args) {
