@@ -30,7 +30,7 @@ public class Solution {
                 getString(s, tens) +
                 getString(s, units) + " ";
 
-        System.out.println(Integer.parseInt(rom));
+        System.out.println(rom);
 
         /*s = s.replace("IV", "4");
         s = s.replace("IX", "9");
@@ -64,10 +64,10 @@ public class Solution {
         }
 
         for (var entry : map.entrySet()) {
-            if (entry.getValue() == n) n = String.valueOf(entry.getKey());
+            if (entry.getValue() == n) return String.valueOf(entry.getKey());
         }
 
-        return n;
+        return "0";
     }
 
     public static void main(String[] args) {
