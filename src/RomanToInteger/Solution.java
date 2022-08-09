@@ -23,10 +23,7 @@ public class Solution {
 
         char[] intChar = s.toCharArray();
         for (String roman : units.values()) {
-            if (s.contains(roman)){
-                String n = 
-            }
-            s = s.replace(roman, units.keySet());
+            System.out.println(roman);
         }
 
         /*s = s.replace("IV", "4");
