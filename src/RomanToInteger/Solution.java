@@ -5,7 +5,7 @@ import java.util.Locale;
 import java.util.Map;
 
 public class Solution {
-    public static int romanToInt(String s) {
+    public static String romanToInt(String s) {
         s = s.toUpperCase(Locale.ROOT);
         Map<Integer, String> units = new HashMap<>(),
                 tens = new HashMap<>(),
@@ -23,33 +23,10 @@ public class Solution {
         for (int i = 0; i < hundred.length; i++) hundreds.put(i, hundred[i]);
         for (int i = 0; i < thousand.length; i++) thousands.put(i, thousand[i]);
 
-        char[] intChar = s.toCharArray();
-        String rom = "";
-
-        rom = getString(s, thousands) == "0" ? "" : getString(s, thousands) +
+        return getString(s, thousands) == "0" ? "" : getString(s, thousands) +
                 getString(s, hundreds) == "0" ? "" : getString(s, hundreds) +
                 getString(s, tens) == "0" ? "" : getString(s, tens) +
                 getString(s, units) == "0" ? "" : getString(s, units);
-
-        System.out.println(rom);
-
-        /*s = s.replace("IV", "4");
-        s = s.replace("IX", "9");
-        s = s.replace("XL", "4");
-        s = s.replace("XC", "9");
-        s = s.replace("CD", "4");
-        s = s.replace("CM", "9");
-
-        s = s.replace("I", "1");
-        s = s.replace("V", "5");
-        s = s.replace("X", "1");
-        s = s.replace("L", "5");
-        s = s.replace("C", "1");
-        s = s.replace("D", "5");
-        s = s.replace("M", "1");*/
-
-        return Integer.parseInt(s);
-
     }
 
     private static String getString(String s, Map<Integer, String> map) {
@@ -72,6 +49,6 @@ public class Solution {
     }
 
     public static void main(String[] args) {
-        System.out.println(romanToInt("ix"));
+        System.out.println(romanToInt("lviii"));
     }
 }
