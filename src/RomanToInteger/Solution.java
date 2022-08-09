@@ -51,7 +51,7 @@ public class Solution {
 
     }
 
-    private static String getString(String s, Map<Integer, String> map) {
+    private static int getString(String s, Map<Integer, String> map) {
         String n = "";
         for (String roman : map.values()) {
             if (s.contains(roman)) {
@@ -64,10 +64,10 @@ public class Solution {
         }
 
         for (var entry : map.entrySet()) {
-            if (entry.getValue() == n && n != "") n = String.valueOf(entry.getKey());
+            if (entry.getValue().equals(n) && !n.equals("")) n = String.valueOf(entry.getKey());
         }
 
-        return n;
+        return Integer.parseInt(n);
     }
 
     public static void main(String[] args) {
