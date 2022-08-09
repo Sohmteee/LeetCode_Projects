@@ -1,7 +1,26 @@
 package RomanToInteger;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class Solution {
     public static int romanToInt(String s) {
+        Map<Integer, String> units = new HashMap<>(),
+                tens = new HashMap<>(),
+                hundreds = new HashMap<>(),
+                thousands = new HashMap<>();
+
+        String[] unit = {"", "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX"};
+        String[] ten = {"", "X", "XX", "XXX", "XL", "L", "LX", "LXX", "LXXX", "XC"};
+        String[] hundred = {"", "C", "CC", "CCC", "CD", "D", "DC", "DCC", "DCCC", "CM"};
+        String[] thousand = {"", "M", "MM", "MMM"};
+
+        //assign values to the maps
+        for (int i = 0; i < unit.length; i++) units.put(i, unit[i]);
+        for (int i = 0; i < ten.length; i++) tens.put(i, ten[i]);
+        for (int i = 0; i < hundred.length; i++) hundreds.put(i, hundred[i]);
+        for (int i = 0; i < thousand.length; i++) thousands.put(i, thousand[i]);
+
         s = s.replace("IV", "4");
         s = s.replace("IX", "9");
         s = s.replace("XL", "4");
