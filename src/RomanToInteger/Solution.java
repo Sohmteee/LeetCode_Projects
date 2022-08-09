@@ -22,7 +22,17 @@ public class Solution {
         for (int i = 0; i < thousand.length; i++) thousands.put(i, thousand[i]);
 
         char[] intChar = s.toCharArray();
-        System.out.println(units.keySet());
+        for (String roman : units.values()) {
+            String n = "";
+            if (s.contains(roman)){
+                for (String value : units.values()) {
+                    if (units.get(value) == roman) {
+                        System.out.println(units.get(value));
+                    }
+                }
+            }
+//            s = s.replace(roman, units.keySet());
+        }
 
         /*s = s.replace("IV", "4");
         s = s.replace("IX", "9");
@@ -44,6 +54,6 @@ public class Solution {
     }
 
     public static void main(String[] args) {
-        System.out.println(romanToInt("X"));
+        System.out.println(romanToInt("IV"));
     }
 }
