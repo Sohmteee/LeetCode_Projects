@@ -4,10 +4,18 @@ public class Solution {
     public static int romanToInt(String s) {
         s.replace("IV", "4");
         s.replace("IX", "9");
-        s.replace("XL", "40");
-        s.replace("XC", "90");
+        s.replace("XL", "4");
+        s.replace("XC", "9");
+        s.replace("CD", "4");
+        s.replace("CM", "9");
+
+        s.replace("I", "4");
+        s.replace("V", "4");
+        s.replace("X", "4");
+        s.replace("L", "4");
         s.replace("IV", "4");
         s.replace("IV", "4");
+
     }
 
     public static void main(String[] args) {
