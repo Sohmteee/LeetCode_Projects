@@ -13,8 +13,9 @@ public class Solution {
         s.replace("V", "4");
         s.replace("X", "4");
         s.replace("L", "4");
-        s.replace("IV", "4");
-        s.replace("IV", "4");
+        s.replace("C", "4");
+        s.replace("D", "4");
+        s.replace("M", "4");
 
     }
 
