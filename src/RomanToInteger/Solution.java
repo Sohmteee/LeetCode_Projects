@@ -23,10 +23,9 @@ public class Solution {
         for (int i = 0; i < hundred.length; i++) hundreds.put(i, hundred[i]);
         for (int i = 0; i < thousand.length; i++) thousands.put(i, thousand[i]);
 
-        char[] intChar = s.toCharArray();
         String rom = "";
 
-        rom = getString(s, thousands) +
+        rom = getString(s, thousands) == "0" ? "" : getString(s, thousands) +
                 getString(s, hundreds) +
                 getString(s, tens) +
                 getString(s, units) + " ";
