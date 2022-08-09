@@ -50,7 +50,7 @@ public class Solution {
 
     }
 
-    private static String getString(String s, Map<Integer, String> thousands, String rom) {
+    private static String getString(String s, Map<Integer, String> thousands) {
         String n = "";
         for (String roman : thousands.values()) {
             if (s.contains(roman)){
@@ -60,10 +60,11 @@ public class Solution {
                     }
                 }
             }
-//            s = s.replace(roman, units.keySet());
         }
-        rom += n;
-        return rom;
+
+        for (var entry : )
+
+        return n;
     }
 
     public static void main(String[] args) {
