@@ -9,13 +9,15 @@ public class Solution {
         s.replace("CD", "4");
         s.replace("CM", "9");
 
-        s.replace("I", "4");
-        s.replace("V", "4");
-        s.replace("X", "4");
-        s.replace("L", "4");
-        s.replace("C", "4");
-        s.replace("D", "4");
-        s.replace("M", "4");
+        s.replace("I", "1");
+        s.replace("V", "5");
+        s.replace("X", "1");
+        s.replace("L", "5");
+        s.replace("C", "1");
+        s.replace("D", "5");
+        s.replace("M", "1");
+
+        return Integer.parseInt(s);
 
     }
 
