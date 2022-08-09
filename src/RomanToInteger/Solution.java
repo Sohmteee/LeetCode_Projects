@@ -25,9 +25,9 @@ public class Solution {
         for (String roman : units.values()) {
             String n = "";
             if (s.contains(roman)){
-                for (String value : units.values()) {
-                    if (units.get(value) == roman) {
-                        System.out.println(units.get(value));
+                for (int key : units.keySet()) {
+                    if (units.get(key) == roman) {
+                        System.out.println(units.get(key));
                     }
                 }
             }
