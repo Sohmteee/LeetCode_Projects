@@ -24,10 +24,10 @@ public class Solution {
         char[] intChar = s.toCharArray();
         String rom = "";
 
-        rom = getString(s, thousands, rom);
-        rom = getString(s, hundreds, rom);
-        rom = getString(s, tens, rom);
-        rom = getString(s, units, rom);
+        rom = getString(s, thousands, rom) + " ";
+        rom = getString(s, hundreds, rom) + " ";
+        rom = getString(s, tens, rom) + " ";
+        rom = getString(s, units, rom) + " ";
 
         System.out.println(rom);
 
@@ -67,6 +67,6 @@ public class Solution {
     }
 
     public static void main(String[] args) {
-        System.out.println(romanToInt("MXIX"));
+        System.out.println(romanToInt("MCMLXXXIX"));
     }
 }
