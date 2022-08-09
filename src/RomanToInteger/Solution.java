@@ -1,10 +1,12 @@
 package RomanToInteger;
 
 import java.util.HashMap;
+import java.util.Locale;
 import java.util.Map;
 
 public class Solution {
     public static int romanToInt(String s) {
+        s = s.toUpperCase(Locale.ROOT);
         Map<Integer, String> units = new HashMap<>(),
                 tens = new HashMap<>(),
                 hundreds = new HashMap<>(),
@@ -24,10 +26,10 @@ public class Solution {
         char[] intChar = s.toCharArray();
         String rom = "";
 
-        rom = getString(s, thousands) + " ";
-        rom = getString(s, hundreds) + " ";
-        rom = getString(s, tens) + " ";
-        rom = getString(s, units) + " ";
+        rom = getString(s, thousands) +
+                getString(s, hundreds) +
+                getString(s, tens) +
+                getString(s, units) + " ";
 
         System.out.println(rom);
 
@@ -53,7 +55,7 @@ public class Solution {
     private static String getString(String s, Map<Integer, String> map) {
         String n = "";
         for (String roman : map.values()) {
-            if (s.contains(roman)){
+            if (s.contains(roman)) {
                 for (int key : map.keySet()) {
                     if (map.get(key) == roman & (roman.length() > n.length())) {
                         n = roman;
@@ -70,6 +72,6 @@ public class Solution {
     }
 
     public static void main(String[] args) {
-        System.out.println(romanToInt("MCMLXXXIX"));
+        System.out.println(romanToInt("ix"));
     }
 }
