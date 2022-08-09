@@ -24,10 +24,10 @@ public class Solution {
         char[] intChar = s.toCharArray();
         String rom = "";
 
-        rom = getString(s, thousands, rom) + " ";
-        rom = getString(s, hundreds, rom) + " ";
-        rom = getString(s, tens, rom) + " ";
-        rom = getString(s, units, rom) + " ";
+        rom = getString(s, thousands) + " ";
+        rom = getString(s, hundreds) + " ";
+        rom = getString(s, tens) + " ";
+        rom = getString(s, units) + " ";
 
         System.out.println(rom);
 
@@ -63,7 +63,7 @@ public class Solution {
         }
 
         for (var entry : map.entrySet()) {
-            if (entry.getValue() == n) return 
+            if (entry.getValue() == n) n = String.valueOf(entry.getKey());
         }
 
         return n;
