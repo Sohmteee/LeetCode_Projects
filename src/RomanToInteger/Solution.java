@@ -30,7 +30,7 @@ public class Solution {
                 getString(s, tens) +
                 getString(s, units) + " ";
 
-        System.out.println(Integer.parseInt(rom));
+        System.out.println(rom);
 
         /*s = s.replace("IV", "4");
         s = s.replace("IX", "9");
