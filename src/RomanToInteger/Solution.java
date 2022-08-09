@@ -24,9 +24,10 @@ public class Solution {
         char[] intChar = s.toCharArray();
         String rom = "";
 
-        String n = getString(s, thousands);
-
-        rom += n;
+        rom = getString(s, thousands, rom);
+        rom = getString(s, hundreds, rom);
+        rom = getString(s, tens, rom);
+        rom = getString(s, units, rom);
 
         System.out.println(rom);
 
@@ -49,7 +50,7 @@ public class Solution {
 
     }
 
-    private static String getString(String s, Map<Integer, String> thousands) {
+    private static String getString(String s, Map<Integer, String> thousands, String rom) {
         String n = "";
         for (String roman : thousands.values()) {
             if (s.contains(roman)){
@@ -59,11 +60,13 @@ public class Solution {
                     }
                 }
             }
+//            s = s.replace(roman, units.keySet());
         }
-        return n;
+        rom += n;
+        return rom;
     }
 
     public static void main(String[] args) {
-        System.out.println(romanToInt("M"));
+        System.out.println(romanToInt("MXIX"));
     }
 }
