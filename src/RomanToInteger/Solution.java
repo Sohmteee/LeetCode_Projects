@@ -26,10 +26,10 @@ public class Solution {
         char[] intChar = s.toCharArray();
         String rom = "";
 
-        rom = getString(s, thousands) +
-                getString(s, hundreds) +
-                getString(s, tens) +
-                getString(s, units) + " ";
+        rom = getString(s, thousands) == "0" ? "" : getString(s, thousands) +
+                getString(s, hundreds) == "0" ? "" : getString(s, hundreds) +
+                getString(s, tens) == "0" ? "" : getString(s, tens) +
+                getString(s, units) == "0" ? "" : getString(s, units);
 
         System.out.println(rom);
 
