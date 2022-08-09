@@ -3,7 +3,7 @@ package ReverseInteger;
 public class Main {
     public static void main(String[] args) {
         System.out.println(reverse(
-                1534236469));
+                1534236));
         System.out.println(reverse(
                 123));
     }
@@ -19,8 +19,7 @@ public class Main {
         }
 
         while (x > 0) {
-            reverse *= 10;
-            reverse += x % 10;
+            reverse = (reverse * 10) + x % 10;
             x /= 10;
         }
 
