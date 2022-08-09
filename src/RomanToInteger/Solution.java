@@ -50,19 +50,21 @@ public class Solution {
 
     }
 
-    private static String getString(String s, Map<Integer, String> thousands) {
+    private static String getString(String s, Map<Integer, String> map) {
         String n = "";
-        for (String roman : thousands.values()) {
+        for (String roman : map.values()) {
             if (s.contains(roman)){
-                for (int key : thousands.keySet()) {
-                    if (thousands.get(key) == roman & (roman.length() > n.length())) {
+                for (int key : map.keySet()) {
+                    if (map.get(key) == roman & (roman.length() > n.length())) {
                         n = roman;
                     }
                 }
             }
         }
 
-        for (var entry : )
+        for (var entry : map.entrySet()) {
+            if (entry.getValue() == n) return 
+        }
 
         return n;
     }
