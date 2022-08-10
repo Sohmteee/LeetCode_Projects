@@ -36,16 +36,17 @@ public class Solution {
 
         System.out.println(separatedRomans);
 
+        String r = "";
         for (String roman : separatedRomans) {
-            if (finalRoman.contains(roman)) {
-                finalRoman = finalRoman.replace(roman, getLongestRoman(units, roman));
-                finalRoman = finalRoman.replace(roman, getLongestRoman(tens, roman));
-                finalRoman = finalRoman.replace(roman, getLongestRoman(hundreds, roman));
-                finalRoman = finalRoman.replace(roman, getLongestRoman(thousands, roman));
+            if (r.contains(roman)) {
+                r = r.replace(roman, getLongestRoman(units, roman));
+                r = r.replace(roman, getLongestRoman(tens, roman));
+                r = r.replace(roman, getLongestRoman(hundreds, roman));
+                r = r.replace(roman, getLongestRoman(thousands, roman));
             }
         }
 
-        System.out.println("Final Roman : " + finalRoman);
+        System.out.println(separatedRomans);
 
         th = getNumeral(finalRoman, thousands);
         h = getNumeral(finalRoman, hundreds);
