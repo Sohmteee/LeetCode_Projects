@@ -52,10 +52,10 @@ public class Solution {
         t = getString(finalRoman, tens);
         u = getString(finalRoman, units);
 
-        System.out.println("\nSeparating the digits : " + th + " " + h + " " + t + " " + u);
+        System.out.println("Separating the digits : " + th + " " + h + " " + t + " " + u);
 
         finalRoman = th + h + t + u;
-        
+
         System.out.println("Final Roman : " + finalRoman);
 
         separatedRomans = new ArrayList<>();
