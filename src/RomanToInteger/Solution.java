@@ -24,7 +24,7 @@ public class Solution {
         for (int i = 0; i < hundred.length; i++) hundreds.put(i, hundred[i]);
         for (int i = 0; i < thousand.length; i++) thousands.put(i, thousand[i]);
 
-        String rom;
+        String finalRoman = "";
         String th, h, t, u;
 
         System.out.print("Separating the Roman Numerals : ");
@@ -34,8 +34,6 @@ public class Solution {
         t = getString(s, tens);
         u = getString(s, units);
 
-        String finalRoman = "";
-
         for (String roman : separatedRomans) {
             if (roman.length() > finalRoman.length()) finalRoman = roman;
         }
@@ -44,7 +42,7 @@ public class Solution {
 
         System.out.println("\nSeparating the digits : " + th + " " + h + " " + t + " " + u);
 
-        rom = th + h + t + u;
+        finalRoman = th + h + t + u;
 
         separatedRomans = new ArrayList<>();
 
