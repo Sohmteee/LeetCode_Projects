@@ -55,6 +55,8 @@ public class Solution {
         System.out.println("\nSeparating the digits : " + th + " " + h + " " + t + " " + u);
 
         finalRoman = th + h + t + u;
+        
+        System.out.println("Final Roman : " + finalRoman);
 
         separatedRomans = new ArrayList<>();
 
