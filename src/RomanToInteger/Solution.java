@@ -1,10 +1,10 @@
 package RomanToInteger;
 
-import java.util.HashMap;
-import java.util.Locale;
-import java.util.Map;
+import java.util.*;
 
 public class Solution {
+
+    public static List<String> separatedRomans = new ArrayList<>();
     public static int romanToInt(String s) {
         s = s.toUpperCase(Locale.ROOT);
         System.out.println("Roman Numeral to convert : " + s);
@@ -24,10 +24,11 @@ public class Solution {
         for (int i = 0; i < hundred.length; i++) hundreds.put(i, hundred[i]);
         for (int i = 0; i < thousand.length; i++) thousands.put(i, thousand[i]);
 
-        String rom = "";
+        String rom;
         String th, h, t, u;
 
         System.out.print("Separating the Roman Numerals : ");
+        System.out.println(separatedRomans);
 
         th = getString(s, thousands);
         h = getString(s, hundreds);
@@ -38,6 +39,8 @@ public class Solution {
 
         rom = th + h + t + u;
 
+        separatedRomans = new ArrayList<>();
+
         return Integer.parseInt(rom);
 
     }
@@ -47,7 +50,7 @@ public class Solution {
         for (String roman : map.values()) {
             if (s.contains(roman)) {
                 for (int key : map.keySet()) {
-                    if (map.get(key) == roman & (roman.length() > n.length())) {
+                    if (map.get(key).equals(roman) & (roman.length() > n.length())) {
                         n = roman;
                     }
                 }
@@ -56,7 +59,10 @@ public class Solution {
 
         for (var entry : map.entrySet()) {
             if (entry.getValue().equals(n)) {
-                if (!n.equals("")) System.out.print(n + " ");
+                if (!n.equals("")) {
+                    separatedRomans.add(n);
+                    System.out.print(n + " ");
+                }
                 n = String.valueOf(entry.getKey());
             }
         }
@@ -74,7 +80,7 @@ public class Solution {
         long end = System.currentTimeMillis();
 
         long exec = end - start;
-        double inSeconds = (double)exec / 1000;
+        double inSeconds = (double) exec / 1000;
 
         System.out.printf("\nIt took %s seconds to run your code%n", inSeconds);
     }
