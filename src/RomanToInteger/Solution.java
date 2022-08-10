@@ -34,6 +34,12 @@ public class Solution {
         t = getString(s, tens);
         u = getString(s, units);
 
+        String finalRoman = "";
+
+        for (String roman : separatedRomans) {
+            if (roman.length() > finalRoman.length()) finalRoman = roman;
+        }
+
         System.out.println(separatedRomans);
 
         System.out.println("\nSeparating the digits : " + th + " " + h + " " + t + " " + u);
@@ -42,7 +48,7 @@ public class Solution {
 
         separatedRomans = new ArrayList<>();
 
-        return Integer.parseInt(rom);
+        return Integer.parseInt(finalRoman);
 
     }
 
