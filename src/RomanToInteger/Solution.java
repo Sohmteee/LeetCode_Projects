@@ -29,10 +29,10 @@ public class Solution {
 
         System.out.print("Separating the Roman Numerals : ");
 
-        th = getString(s, thousands);
-        h = getString(s, hundreds);
-        t = getString(s, tens);
-        u = getString(s, units);
+        th = getNumeral(s, thousands);
+        h = getNumeral(s, hundreds);
+        t = getNumeral(s, tens);
+        u = getNumeral(s, units);
 
         System.out.println(separatedRomans);
 
@@ -47,10 +47,10 @@ public class Solution {
 
         System.out.println("Final Roman : " + finalRoman);
 
-        th = getString(finalRoman, thousands);
-        h = getString(finalRoman, hundreds);
-        t = getString(finalRoman, tens);
-        u = getString(finalRoman, units);
+        th = getNumeral(finalRoman, thousands);
+        h = getNumeral(finalRoman, hundreds);
+        t = getNumeral(finalRoman, tens);
+        u = getNumeral(finalRoman, units);
 
         System.out.println("Separating the digits : " + th + " " + h + " " + t + " " + u);
 
@@ -75,7 +75,7 @@ public class Solution {
         return n.equals("") ? roman : n;
     }
 
-    private static String getString(String s, Map<Integer, String> map) {
+    private static String getNumeral(String s, Map<Integer, String> map) {
         String n = "";
         for (String roman : map.values()) {
             if (s.contains(roman)) {
@@ -91,7 +91,6 @@ public class Solution {
             if (entry.getValue().equals(n)) {
                 if (!n.equals("")) {
                     separatedRomans.add(n);
-//                    System.out.print(n + " ");
                 }
                 n = String.valueOf(entry.getKey());
             }
