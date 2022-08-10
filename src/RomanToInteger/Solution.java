@@ -54,10 +54,10 @@ public class Solution {
     }
 
     public static void main(String[] args) {
-        System.out.println(romanToInt("iii"));
-        System.out.println(romanToInt("lviii"));
-        System.out.println(romanToInt("mcmxciv"));
-        System.out.println(romanToInt("ix"));
+        System.out.println("III : "+romanToInt("III"));
+        System.out.println("LVIII : "+romanToInt("LVIII"));
+        System.out.println("MCMXCIV : "+romanToInt("MCMXCIV"));
+        System.out.println("IX : "+romanToInt("IX"));
 
     }
 }
