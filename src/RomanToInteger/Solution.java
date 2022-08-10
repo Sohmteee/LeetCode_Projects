@@ -47,7 +47,7 @@ public class Solution {
 
         for (var entry : map.entrySet()) {
             if (entry.getValue().equals(n)) {
-                System.out.print(n);
+                System.out.println(n);
                 n = String.valueOf(entry.getKey());
             }
         }
@@ -56,11 +56,11 @@ public class Solution {
     }
 
     public static void main(String[] args) {
-        System.out.println("\nIII : " + romanToInt("III"));
-        System.out.println("\nLVIII : " + romanToInt("LVIII"));
-        System.out.println("\nMCMXCIV : " + romanToInt("MCMXCIV"));
-        System.out.println("\nIX : " + romanToInt("IX"));
-        System.out.println("\nMDLXX : " + romanToInt("MDLXX"));
+        System.out.println("III : " + romanToInt("III"));
+        System.out.println("LVIII : " + romanToInt("LVIII"));
+        System.out.println("MCMXCIV : " + romanToInt("MCMXCIV"));
+        System.out.println("IX : " + romanToInt("IX"));
+        System.out.println("MDLXX : " + romanToInt("MDLXX"));
 
     }
 }
