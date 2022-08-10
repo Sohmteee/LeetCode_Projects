@@ -46,11 +46,14 @@ public class Solution {
         }
 
         System.out.println("Final Roman : " + finalRoman);
+        separatedRomans = new ArrayList<>();
 
         th = getNumeral(finalRoman, thousands);
         h = getNumeral(finalRoman, hundreds);
         t = getNumeral(finalRoman, tens);
         u = getNumeral(finalRoman, units);
+
+        System.out.println(separatedRomans);
 
         System.out.println("Separating the digits : " + th + " " + h + " " + t + " " + u);
 
