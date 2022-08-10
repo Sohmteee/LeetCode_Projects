@@ -31,6 +31,9 @@ public class Solution {
         h = getString(s, hundreds);
         th = getString(s, thousands);
 
+        System.out.println(th + " " + h + " " + t + " " + u);
+
+
         rom = th + h + t + u;
 
         return Integer.parseInt(rom);
