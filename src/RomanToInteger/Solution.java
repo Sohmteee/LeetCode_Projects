@@ -5,7 +5,6 @@ import java.util.*;
 public class Solution {
 
     public static List<String> separatedRomans = new ArrayList<>();
-
     public static int romanToInt(String s) {
         s = s.toUpperCase(Locale.ROOT);
         System.out.println("Roman Numeral to convert : " + s);
@@ -55,26 +54,6 @@ public class Solution {
 
     }
 
-    private static String getString(String s, Map<Integer, String> map) {
-        String n = "";
-        for (String roman : map.values()) {
-            if (s.contains(roman)) {
-                n = getLongestRoman(map, roman);
-            }
-        }
-
-        for (var entry : map.entrySet()) {
-            if (entry.getValue().equals(n)) {
-                if (!n.equals("")) {
-                    separatedRomans.add(n);
-                }
-                n = String.valueOf(entry.getKey());
-            }
-        }
-
-        return (n.equals("")) ? "0" : n;
-    }
-
     private static String getLongestRoman(Map<Integer, String> map, String roman) {
         String n = "";
         for (int key : map.keySet()) {
@@ -82,7 +61,33 @@ public class Solution {
                 n = roman;
             }
         }
-        return n;
+
+        return n.equals("") ? roman : n;
+    }
+
+    private static String getString(String s, Map<Integer, String> map) {
+        String n = "";
+        for (String roman : map.values()) {
+            if (s.contains(roman)) {
+                for (int key : map.keySet()) {
+                    if (map.get(key).equals(roman) & (roman.length() > n.length())) {
+                        n = roman;
+                    }
+                }
+            }
+        }
+
+        for (var entry : map.entrySet()) {
+            if (entry.getValue().equals(n)) {
+                if (!n.equals("")) {
+                    separatedRomans.add(n);
+//                    System.out.print(n + " ");
+                }
+                n = String.valueOf(entry.getKey());
+            }
+        }
+
+        return (n.equals("")) ? "0" : n;
     }
 
     public static void main(String[] args) {
