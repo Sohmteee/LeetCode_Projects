@@ -26,12 +26,14 @@ public class Solution {
         String rom = "";
         String th, h, t, u;
 
+        System.out.print("Separating the Roman Numerals: ");
+
         th = getString(s, thousands);
         h = getString(s, hundreds);
         t = getString(s, tens);
         u = getString(s, units);
 
-        System.out.println("\n Separating: " + th + " " + h + " " + t + " " + u);
+        System.out.println("\nSeparating the digits: " + th + " " + h + " " + t + " " + u);
 
         rom = th + h + t + u;
 
