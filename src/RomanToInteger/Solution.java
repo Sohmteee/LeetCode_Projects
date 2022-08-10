@@ -71,15 +71,10 @@ public class Solution {
     public static void main(String[] args) {
         long start = System.currentTimeMillis();
         System.out.println("III => " + romanToInt("III") + "\n");
-        separatedRomans = new ArrayList<>();
         System.out.println("LVIII => " + romanToInt("LVIII") + "\n");
-        separatedRomans = new ArrayList<>();
         System.out.println("MCMXCIV => " + romanToInt("MCMXCIV") + "\n");
-        separatedRomans = new ArrayList<>();
         System.out.println("IX => " + romanToInt("IX") + "\n");
-        separatedRomans = new ArrayList<>();
         System.out.println("MDLXX => " + romanToInt("MDLXX") + "\n");
-        separatedRomans = new ArrayList<>();
         long end = System.currentTimeMillis();
 
         long exec = end - start;
