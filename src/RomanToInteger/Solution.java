@@ -31,8 +31,7 @@ public class Solution {
         h = getString(s, hundreds);
         th = getString(s, thousands);
 
-        System.out.println("\n" + thousands.get(th) + " " + hundreds.get(h) + " " + tens.get(t) + " " + units.get(u));
-        System.out.println(th + " " + h + " " + t + " " + u);
+        System.out.println("\n" + th + " " + h + " " + t + " " + u);
 
         rom = th + h + t + u;
 
