@@ -24,7 +24,7 @@ public class Solution {
         for (int i = 0; i < hundred.length; i++) hundreds.put(i, hundred[i]);
         for (int i = 0; i < thousand.length; i++) thousands.put(i, thousand[i]);
 
-        String finalRoman = "";
+        String finalRoman = s;
         String th, h, t, u;
 
         System.out.print("Separating the Roman Numerals : ");
