@@ -30,8 +30,6 @@ public class Solution {
                 getString(s, tens) +
                 getString(s, units);
 
-        System.out.println(rom);
-
         return Integer.parseInt(rom);
 
     }
