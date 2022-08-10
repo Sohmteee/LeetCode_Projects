@@ -75,5 +75,7 @@ public class Solution {
 
         long exec = start - end;
         double inSeconds = (double)exec / 1_000_000_000.0;
+
+        System.out.printf("\n It took %s seconds to run your code%n", inSeconds);
     }
 }
