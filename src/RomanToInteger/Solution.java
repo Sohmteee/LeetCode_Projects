@@ -47,6 +47,7 @@ public class Solution {
 
         for (var entry : map.entrySet()) {
             if (entry.getValue().equals(n)) {
+                System.out.print(n + " ");
                 n = String.valueOf(entry.getKey());
             }
         }
