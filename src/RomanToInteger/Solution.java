@@ -27,13 +27,13 @@ public class Solution {
         String th, h, t, u;
 
         u = getString(s, units);
-        s = s.replace(units.get(Integer.parseInt(u)), "\0");
+        if (s != "") s = s.replace(units.get(Integer.parseInt(u)), "\0");
         t = getString(s, tens);
-        s = s.replace(tens.get(Integer.parseInt(t)), "\0");
+        if (s != "") s = s.replace(tens.get(Integer.parseInt(t)), "\0");
         h = getString(s, hundreds);
-        s = s.replace(hundreds.get(Integer.parseInt(h)), "\0");
+        if (s != "") s = s.replace(hundreds.get(Integer.parseInt(h)), "\0");
         th = getString(s, thousands);
-        s = s.replace(thousands.get(Integer.parseInt(th)), "\0");
+        if (s != "") s = s.replace(thousands.get(Integer.parseInt(th)), "\0");
 
         rom = th + h + t + u;
 
