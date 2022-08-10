@@ -24,10 +24,14 @@ public class Solution {
         for (int i = 0; i < thousand.length; i++) thousands.put(i, thousand[i]);
 
         String rom = "";
-        rom = getString(s, thousands)+
-                getString(s, hundreds) +
-                getString(s, tens) +
-                getString(s, units);
+        String th, h, t, u;
+
+        u = getString(s, units);
+        t = getString(s, tens);
+        h = getString(s, hundreds);
+        th = getString(s, thousands);
+
+        rom = th + h + t + u;
 
         return Integer.parseInt(rom);
 
