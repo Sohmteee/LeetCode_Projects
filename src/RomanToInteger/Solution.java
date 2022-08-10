@@ -47,10 +47,12 @@ public class Solution {
         }
 
         for (var entry : map.entrySet()) {
-            if (entry.getValue().equals(n) && !n.equals("")) n = String.valueOf(entry.getKey());
+            if (entry.getValue().equals(n) && !n.equals("")) {
+                System.out.println(n);
+                n = String.valueOf(entry.getKey());
+            }
         }
 
-        System.out.println(n);
 
         return n;
     }
