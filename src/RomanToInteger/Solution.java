@@ -38,6 +38,8 @@ public class Solution {
             if (roman.length() > finalRoman.length()) finalRoman = roman;
         }
 
+        System.out.println("Final Roman : " + finalRoman);
+
         System.out.println(separatedRomans);
 
         System.out.println("\nSeparating the digits : " + th + " " + h + " " + t + " " + u);
