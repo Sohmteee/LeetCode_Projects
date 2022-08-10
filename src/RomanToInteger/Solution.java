@@ -73,9 +73,9 @@ public class Solution {
         System.out.println("MDLXX => " + romanToInt("MDLXX") + "\n");
         long end = System.currentTimeMillis();
 
-        long exec = start - end;
-        double inSeconds = (double)exec;
+        long exec = end - start;
+        double inSeconds = (double)exec / 1000;
 
-        System.out.printf("\n It took %s seconds to run your code%n", inSeconds);
+        System.out.printf("\nIt took %s seconds to run your code%n", inSeconds);
     }
 }
