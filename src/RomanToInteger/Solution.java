@@ -47,6 +47,11 @@ public class Solution {
 
         System.out.println("Final Roman : " + finalRoman);
 
+        th = getString(finalRoman, thousands);
+        h = getString(finalRoman, hundreds);
+        t = getString(finalRoman, tens);
+        u = getString(finalRoman, units);
+
         System.out.println("\nSeparating the digits : " + th + " " + h + " " + t + " " + u);
 
         finalRoman = th + h + t + u;
