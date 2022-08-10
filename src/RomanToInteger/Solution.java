@@ -34,13 +34,13 @@ public class Solution {
         t = getString(s, tens);
         u = getString(s, units);
 
+        System.out.println(separatedRomans);
+
         for (String roman : separatedRomans) {
             if (roman.length() > finalRoman.length()) finalRoman = roman;
         }
 
         System.out.println("Final Roman : " + finalRoman);
-
-        System.out.println(separatedRomans);
 
         System.out.println("\nSeparating the digits : " + th + " " + h + " " + t + " " + u);
 
