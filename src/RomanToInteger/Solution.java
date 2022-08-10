@@ -31,7 +31,7 @@ public class Solution {
         t = getString(s, tens);
         u = getString(s, units);
 
-        System.out.println("\n" + th + " " + h + " " + t + " " + u);
+        System.out.println("\n Separating: " + th + " " + h + " " + t + " " + u);
 
         rom = th + h + t + u;
 
