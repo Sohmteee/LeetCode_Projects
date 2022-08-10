@@ -54,13 +54,12 @@ public class Solution {
         }
 
         for (var entry : map.entrySet()) {
-            if (entry.getValue().equals(n) && !n.equals("")) {
+            if (entry.getValue().equals(n)) {
                 n = String.valueOf(entry.getKey());
             }
         }
 
-
-        return n;
+        return (n.equals("")) ? "0" : n;
     }
 
     public static void main(String[] args) {
