@@ -39,8 +39,6 @@ public class Solution {
 
         rom = th + h + t + u;
 
-        separatedRomans = new ArrayList<>();
-
         return Integer.parseInt(rom);
 
     }
