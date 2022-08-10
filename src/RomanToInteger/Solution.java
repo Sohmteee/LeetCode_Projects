@@ -50,6 +50,8 @@ public class Solution {
             if (entry.getValue().equals(n) && !n.equals("")) n = String.valueOf(entry.getKey());
         }
 
+        System.out.println(n);
+
         return n;
     }
 
