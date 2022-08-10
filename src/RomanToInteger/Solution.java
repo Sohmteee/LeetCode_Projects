@@ -24,18 +24,10 @@ public class Solution {
         for (int i = 0; i < thousand.length; i++) thousands.put(i, thousand[i]);
 
         String rom = "";
-        String th, h, t, u;
-
-        u = getString(s, units);
-        if (u != "") s = s.replace(units.get(Integer.parseInt(u)), "\0");
-        t = getString(s, tens);
-        if (t != "") s = s.replace(tens.get(Integer.parseInt(t)), "\0");
-        h = getString(s, hundreds);
-        if (h != "") s = s.replace(hundreds.get(Integer.parseInt(h)), "\0");
-        th = getString(s, thousands);
-        if (th != "") s = s.replace(thousands.get(Integer.parseInt(th)), "\0");
-
-        rom = th + h + t + u;
+        rom = getString(s, thousands)+
+                getString(s, hundreds) +
+                getString(s, tens) +
+                getString(s, units);
 
         return Integer.parseInt(rom);
 
