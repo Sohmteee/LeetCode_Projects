@@ -47,7 +47,7 @@ public class Solution {
                 if (r.length() > roman.length()) {
                     separatedRomans.remove(roman);
                 }
-            }
+            } else r = roman;
         }
 
         System.out.println(separatedRomans);
