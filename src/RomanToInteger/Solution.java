@@ -24,11 +24,18 @@ public class Solution {
         for (int i = 0; i < thousand.length; i++) thousands.put(i, thousand[i]);
 
         String rom = "";
+        String th, h, t, u;
 
-        rom = getString(s, thousands)+
-                getString(s, hundreds) +
-                getString(s, tens) +
-                getString(s, units);
+        u = getString(s, units);
+        s = s.replace(units.get(Integer.parseInt(u)), "");
+        t = getString(s, tens);
+        s = s.replace(tens.get(Integer.parseInt(t)), "");
+        h = getString(s, hundreds);
+        s = s.replace(hundreds.get(Integer.parseInt(h)), "");
+        th = getString(s, thousands);
+        s = s.replace(thousands.get(Integer.parseInt(th)), "");
+
+        rom = th + h + t + u;
 
         return Integer.parseInt(rom);
 
@@ -58,10 +65,10 @@ public class Solution {
     }
 
     public static void main(String[] args) {
-        System.out.println("III : "+romanToInt("III"));
-        System.out.println("LVIII : "+romanToInt("LVIII"));
-        System.out.println("MCMXCIV : "+romanToInt("MCMXCIV"));
-        System.out.println("IX : "+romanToInt("IX"));
+        System.out.println("III : " + romanToInt("III"));
+        System.out.println("LVIII : " + romanToInt("LVIII"));
+        System.out.println("MCMXCIV : " + romanToInt("MCMXCIV"));
+        System.out.println("IX : " + romanToInt("IX"));
 
     }
 }
