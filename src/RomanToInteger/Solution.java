@@ -62,11 +62,11 @@ public class Solution {
     }
 
     public static void main(String[] args) {
-        System.out.println("\nIII : " + romanToInt("III") + "\n");
-        System.out.println("\nLVIII : " + romanToInt("LVIII") + "\n");
-        System.out.println("\nMCMXCIV : " + romanToInt("MCMXCIV") + "\n");
-        System.out.println("\nIX : " + romanToInt("IX") + "\n");
-        System.out.println("\nMDLXX : " + romanToInt("MDLXX") + "\n");
+        System.out.println("III : " + romanToInt("III") + "\n");
+        System.out.println("LVIII : " + romanToInt("LVIII") + "\n");
+        System.out.println("MCMXCIV : " + romanToInt("MCMXCIV") + "\n");
+        System.out.println("IX : " + romanToInt("IX") + "\n");
+        System.out.println("MDLXX : " + romanToInt("MDLXX") + "\n");
 
     }
 }
