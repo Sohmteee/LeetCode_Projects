@@ -7,6 +7,7 @@ import java.util.Map;
 public class Solution {
     public static int romanToInt(String s) {
         s = s.toUpperCase(Locale.ROOT);
+        System.out.println("Roman Numeral to convert : " + s);
         Map<Integer, String> units = new HashMap<>(),
                 tens = new HashMap<>(),
                 hundreds = new HashMap<>(),
@@ -26,14 +27,14 @@ public class Solution {
         String rom = "";
         String th, h, t, u;
 
-        System.out.print("Separating the Roman Numerals: ");
+        System.out.print("Separating the Roman Numerals : ");
 
         th = getString(s, thousands);
         h = getString(s, hundreds);
         t = getString(s, tens);
         u = getString(s, units);
 
-        System.out.println("\nSeparating the digits: " + th + " " + h + " " + t + " " + u);
+        System.out.println("\nSeparating the digits : " + th + " " + h + " " + t + " " + u);
 
         rom = th + h + t + u;
 
@@ -64,11 +65,11 @@ public class Solution {
     }
 
     public static void main(String[] args) {
-        System.out.println("III : " + romanToInt("III") + "\n");
-        System.out.println("LVIII : " + romanToInt("LVIII") + "\n");
-        System.out.println("MCMXCIV : " + romanToInt("MCMXCIV") + "\n");
-        System.out.println("IX : " + romanToInt("IX") + "\n");
-        System.out.println("MDLXX : " + romanToInt("MDLXX") + "\n");
+        System.out.println("III => " + romanToInt("III") + "\n");
+        System.out.println("LVIII => " + romanToInt("LVIII") + "\n");
+        System.out.println("MCMXCIV => " + romanToInt("MCMXCIV") + "\n");
+        System.out.println("IX => " + romanToInt("IX") + "\n");
+        System.out.println("MDLXX => " + romanToInt("MDLXX") + "\n");
 
     }
 }
