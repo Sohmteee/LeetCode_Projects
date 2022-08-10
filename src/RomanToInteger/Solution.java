@@ -68,6 +68,7 @@ public class Solution {
         System.out.println("LVIII : " + romanToInt("LVIII"));
         System.out.println("MCMXCIV : " + romanToInt("MCMXCIV"));
         System.out.println("IX : " + romanToInt("IX"));
+        System.out.println("MDLXX : " + romanToInt("MDLXX"));
 
     }
 }
