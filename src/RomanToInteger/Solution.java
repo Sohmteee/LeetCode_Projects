@@ -38,7 +38,7 @@ public class Solution {
 
         for (String roman : separatedRomans) {
             if (finalRoman.contains(roman)) {
-                finalRoman = getLongestRoman(units, roman);
+                finalRoman = finalRoman.replace(roman, getLongestRoman(units, roman));
             }
         }
 
