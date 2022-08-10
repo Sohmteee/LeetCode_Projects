@@ -65,16 +65,16 @@ public class Solution {
     }
 
     public static void main(String[] args) {
-        long start = System.nanoTime();
+        long start = System.currentTimeMillis();
         System.out.println("III => " + romanToInt("III") + "\n");
         System.out.println("LVIII => " + romanToInt("LVIII") + "\n");
         System.out.println("MCMXCIV => " + romanToInt("MCMXCIV") + "\n");
         System.out.println("IX => " + romanToInt("IX") + "\n");
         System.out.println("MDLXX => " + romanToInt("MDLXX") + "\n");
-        long end = System.nanoTime();
+        long end = System.currentTimeMillis();
 
         long exec = start - end;
-        double inSeconds = (double)exec / 1_000_000_000.0;
+        double inSeconds = (double)exec;
 
         System.out.printf("\n It took %s seconds to run your code%n", inSeconds);
     }
