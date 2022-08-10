@@ -5,6 +5,7 @@ import java.util.*;
 public class Solution {
 
     public static List<String> separatedRomans = new ArrayList<>();
+
     public static int romanToInt(String s) {
         s = s.toUpperCase(Locale.ROOT);
         System.out.println("Roman Numeral to convert : " + s);
@@ -37,7 +38,9 @@ public class Solution {
         System.out.println(separatedRomans);
 
         for (String roman : separatedRomans) {
-            if (roman.length() > finalRoman.length()) finalRoman = roman;
+            if (finalRoman.contains(roman)) {
+                finalRoman = getLongestRoman(units, roman);
+            }
         }
 
         System.out.println("Final Roman : " + finalRoman);
@@ -56,11 +59,7 @@ public class Solution {
         String n = "";
         for (String roman : map.values()) {
             if (s.contains(roman)) {
-                for (int key : map.keySet()) {
-                    if (map.get(key).equals(roman) & (roman.length() > n.length())) {
-                        n = roman;
-                    }
-                }
+                n = getLongestRoman(map, roman);
             }
         }
 
@@ -68,13 +67,22 @@ public class Solution {
             if (entry.getValue().equals(n)) {
                 if (!n.equals("")) {
                     separatedRomans.add(n);
-//                    System.out.print(n + " ");
                 }
                 n = String.valueOf(entry.getKey());
             }
         }
 
         return (n.equals("")) ? "0" : n;
+    }
+
+    private static String getLongestRoman(Map<Integer, String> map, String roman) {
+        String n = "";
+        for (int key : map.keySet()) {
+            if (map.get(key).equals(roman) & (roman.length() > n.length())) {
+                n = roman;
+            }
+        }
+        return n;
     }
 
     public static void main(String[] args) {
