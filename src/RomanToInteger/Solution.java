@@ -39,13 +39,9 @@ public class Solution {
         for (String roman : separatedRomans) {
             if (finalRoman.contains(roman)) {
                 finalRoman = finalRoman.replace(roman, getLongestRoman(units, roman));
-                separatedRomans.remove(roman);
                 finalRoman = finalRoman.replace(roman, getLongestRoman(tens, roman));
-                separatedRomans.remove(roman);
                 finalRoman = finalRoman.replace(roman, getLongestRoman(hundreds, roman));
-                separatedRomans.remove(roman);
                 finalRoman = finalRoman.replace(roman, getLongestRoman(thousands, roman));
-                separatedRomans.remove(roman);
             }
         }
 
