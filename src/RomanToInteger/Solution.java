@@ -54,6 +54,9 @@ public class Solution {
     }
 
     public static void main(String[] args) {
-        System.out.println(romanToInt("ix"));
+        System.out.println(romanToInt("iii"));
+        System.out.println(romanToInt("lviii"));
+        System.out.println(romanToInt("mcm"));
+
     }
 }
