@@ -26,10 +26,10 @@ public class Solution {
         String rom = "";
         String th, h, t, u;
 
-        u = getString(s, units);
-        t = getString(s, tens);
-        h = getString(s, hundreds);
         th = getString(s, thousands);
+        h = getString(s, hundreds);
+        t = getString(s, tens);
+        u = getString(s, units);
 
         System.out.println("\n" + th + " " + h + " " + t + " " + u);
 
