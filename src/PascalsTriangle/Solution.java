@@ -6,7 +6,7 @@ Given an integer rowIndex, return the rowIndexth (0-indexed) row of the Pascal's
 In Pascal's triangle, each number is the sum of the two numbers directly above it as shown:
 
            1
-         1    1
+         1   1
       1    2    1
    1    3    3    1
  1    4    6    4    1
@@ -25,12 +25,14 @@ Output: [1,1]
 
 
 Constraints:
-0 <= rowIndex <= 33*/
+0 <= rowIndex <= 33
+*/
 
 import java.util.List;
 
 public class Solution {
     public List<Integer> getRow(int rowIndex) {
-
+        
+        return null;
     }
 }
